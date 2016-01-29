@@ -4,7 +4,7 @@
 <br />
 <div id="mainbox">
 
-    <div class="card" ng-repeat="product in products" style="background-image: url('{{product.img}}')">
+    <div class="card" ng-repeat="product in products" ng-style="product.image">
 
         <div class="cardOverlay">
             {{product.description}}

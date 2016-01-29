@@ -3,12 +3,50 @@
         "name": "Product 1",
         "description": "Description of Product 1",
         "price": "1000",
-        "img": "http://miriadna.com/desctopwalls/images/max/Sun-rays-in-forest.jpg"
+        "image": {
+            "background-image": "url('http://ecx.images-amazon.com/images/I/61JZGK6L--L._SL1500_.jpg')",
+            "size": "contain",
+            "position": "center center"
+        }
     },
     {
         "name": "Product 2",
         "description": "Description of Product 2",
         "price": "1500",
-        "img": "https://upload.wikimedia.org/wikipedia/commons/f/f6/Epping_Forest_Centenary_Walk_2_-_Sept_2008.jpg"
+        "image": {
+            "background-image": "url('http://ecx.images-amazon.com/images/I/81Lqq3DQPML._SL1500_.jpg')",
+            "size": "contain",
+            "position": "center center"
+        }
+    },
+    {
+        "name": "Product 3",
+        "description": "Description of Product 3a",
+        "price": "1500",
+        "image": {
+            "background-image": "url('http://ecx.images-amazon.com/images/I/81Lqq3DQPML._SL1500_.jpg')",
+            "size": "contain",
+            "position": "center center"
+        }
+    },
+    {
+        "name": "Product 4",
+        "description": "Description of Product 4",
+        "price": "1500",
+        "image": {
+            "background-image": "url('http://ecx.images-amazon.com/images/I/81Lqq3DQPML._SL1500_.jpg')",
+            "size": "contain",
+            "position": "center center"
+        }
+    },
+    {
+        "name": "Product 5",
+        "description": "Description of Product 5",
+        "price": "1500",
+        "image": {
+            "background-image": "url('http://ecx.images-amazon.com/images/I/81Lqq3DQPML._SL1500_.jpg')",
+            "size": "contain",
+            "position": "center center"
+        }
     }
 ]

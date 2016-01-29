@@ -69,22 +69,37 @@ body {
   }
 }
 
+@media screen and (min-width: 1100px) {
+  .container {
+    max-width: 1000px;
+  }
+}
+
 .card{
     width: 250px;
-    box-shadow: 1px 1px 3px #888;
+    box-shadow: 1px 1px 2px #888;
     height: 200px;
     margin: 10px;
-    background-size: cover;
+    background-color: white;
+    background-size: contain;
+    background-position: center center;
+    background-repeat: no-repeat;
 }
 .cardOverlay {
-    display: none;
+    visibility: hidden;
+    opacity: 0;
+    transition: visibility 0s, opacity 0.5s;
+    transition-duration: 0.1s;
     width: inherit;
     height: inherit;
+    padding: 10px;
+    color: whitesmoke;
     background-color: rgba(0, 0, 0, 0.7);
 }
 
 .card:hover .cardOverlay {
-    display: block;
+    visibility: visible;
+    opacity: 1;
 }
 
 .cardImg {
