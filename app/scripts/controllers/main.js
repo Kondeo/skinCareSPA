@@ -17,12 +17,22 @@ angular.module('skinCareStaApp')
 
     $scope.products = [];
 
-    var oReq = new XMLHttpRequest();
-    oReq.onload = reqListener;
-    oReq.open("get", "../data/products.json", true);
-    oReq.send();
+    $scope.getProducts = function(){
+        var oReq = new XMLHttpRequest();
+        oReq.onload = reqListener;
+        oReq.open("get", "../data/products.json", true);
+        oReq.send();
+    }
 
     function reqListener(e) {
         $scope.products = JSON.parse(this.responseText);
     }
+
+    $scope.cart = [];
+
+    $scope.addToCart = function(index){
+        $scope.cart.push(index);
+    }
+
+    $scope.getProducts();
   });

@@ -1,8 +1,8 @@
 [
     {
         "name": "Product 1",
-        "description": "Description of Product 1",
-        "price": "1000",
+        "description": "SanDisk Flash Drive - 32GB",
+        "price": "599",
         "image": {
             "background-image": "url('http://ecx.images-amazon.com/images/I/61JZGK6L--L._SL1500_.jpg')",
             "size": "contain",
@@ -11,8 +11,8 @@
     },
     {
         "name": "Product 2",
-        "description": "Description of Product 2",
-        "price": "1500",
+        "description": "Crucial computer RAM - 8GB kit",
+        "price": "2159",
         "image": {
             "background-image": "url('http://ecx.images-amazon.com/images/I/81Lqq3DQPML._SL1500_.jpg')",
             "size": "contain",
@@ -21,30 +21,30 @@
     },
     {
         "name": "Product 3",
-        "description": "Description of Product 3a",
-        "price": "1500",
+        "description": "Backup USB battery pack. Charges iPhone and Android.",
+        "price": "2995",
         "image": {
-            "background-image": "url('http://ecx.images-amazon.com/images/I/81Lqq3DQPML._SL1500_.jpg')",
+            "background-image": "url('http://ecx.images-amazon.com/images/I/51a7aliO0EL._SL1000_.jpg')",
             "size": "contain",
             "position": "center center"
         }
     },
     {
         "name": "Product 4",
-        "description": "Description of Product 4",
-        "price": "1500",
+        "description": "Bluetooth earpiece",
+        "price": "1999",
         "image": {
-            "background-image": "url('http://ecx.images-amazon.com/images/I/81Lqq3DQPML._SL1500_.jpg')",
+            "background-image": "url('http://ecx.images-amazon.com/images/I/71gH3RhzMfL._SL1500_.jpg')",
             "size": "contain",
             "position": "center center"
         }
     },
     {
         "name": "Product 5",
-        "description": "Description of Product 5",
-        "price": "1500",
+        "description": "USB 3.0 hub",
+        "price": "1399",
         "image": {
-            "background-image": "url('http://ecx.images-amazon.com/images/I/81Lqq3DQPML._SL1500_.jpg')",
+            "background-image": "url('http://ecx.images-amazon.com/images/I/41uOTgf2POL.jpg')",
             "size": "contain",
             "position": "center center"
         }

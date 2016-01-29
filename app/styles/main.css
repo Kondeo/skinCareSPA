@@ -5,9 +5,14 @@
   padding: 0.2em 0;
 }
 
+@import url(https://fonts.googleapis.com/css?family=Lato:600);
+
 body {
   padding: 0;
   background-color: #e5e5e5;
+  font-family: 'Lato', sans-serif;
+  font-weight: 600;
+  color: lightblack;
 }
 
 /* Everything but the jumbotron gets side spacing for mobile first views */
@@ -20,7 +25,6 @@ body {
 
 /* Custom page header */
 .header {
-  border-bottom: 1px solid #e5e5e5;
   margin-bottom: 10px;
 }
 /* Make the masthead heading the same height as the navigation */
@@ -35,7 +39,6 @@ body {
 .footer {
   padding-top: 19px;
   color: #777;
-  border-top: 1px solid #e5e5e5;
 }
 
 .container-narrow > hr {
@@ -76,20 +79,31 @@ body {
 }
 
 .card{
+    position: relative;
     width: 250px;
-    box-shadow: 1px 1px 2px #888;
     height: 200px;
     margin: 10px;
     background-color: white;
     background-size: contain;
     background-position: center center;
     background-repeat: no-repeat;
+    border-radius: 2px;
+    box-shadow: 2px 3px 20px grey;
 }
+
+.cardDim {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+}
+
 .cardOverlay {
+    position: relative;
     visibility: hidden;
     opacity: 0;
     transition: visibility 0s, opacity 0.5s;
-    transition-duration: 0.1s;
     width: inherit;
     height: inherit;
     padding: 10px;
@@ -123,4 +137,88 @@ body {
 .hint {
     font-size: 11px;
     color: darkgrey;
+}
+
+.homeList {
+    list-style: none;
+    padding-left: 0;
+    font-size: 20px;
+}
+
+.homeList > li {
+    margin-bottom: 7px;
+}
+
+
+
+.navbar {
+    background-color: white;
+    border-radius: 0;
+    border: none;
+    box-shadow: 1px 1px 20px grey;
+}
+
+.navbar-default .navbar-nav > li > a {
+    color: white;
+}
+
+.navbar-default .navbar-brand {
+    color: black;
+}
+
+.navRight {
+    float: right;
+}
+
+.navbar-default .navbar-nav > .active > a {
+    background-color: inherit;
+    border-bottom: 2px solid #3498db;
+    color: inherit;
+}
+
+.navbar-default .navbar-nav > .active > a:hover {
+    background-color: inherit;
+    color: inherit;
+}
+
+.navbar-default .navbar-nav > li > a{
+    background-color: inherit;
+    color: inherit;
+}
+
+.navbar-default .navbar-nav > li > a:hover{
+    background-color: inherit;
+    color: inherit;
+}
+
+.navbar-default .navbar-nav > .active > a:enabled {
+    background-color: transparent;
+    color: inherit;
+}
+
+.btn {
+  -webkit-border-radius: 1;
+  -moz-border-radius: 1;
+  border-radius: 1px;
+  color: #ffffff;
+  font-size: 20px;
+  background: #3d944a;
+  padding: 10px 20px 10px 20px;
+  text-decoration: none;
+}
+
+.btn:hover {
+  background: #3dba4e;
+  text-decoration: none;
+}
+
+.btn.addCart {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+}
+
+.cartCount {
+    float: right;
 }
