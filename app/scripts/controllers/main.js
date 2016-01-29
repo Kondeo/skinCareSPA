@@ -8,7 +8,7 @@
  * Controller of the skinCareStaApp
  */
 angular.module('skinCareStaApp')
-  .controller('MainCtrl', function ($scope) {
+  .controller('MainCtrl', function ($scope, $http) {
     this.awesomeThings = [
       'HTML5 Boilerplate',
       'AngularJS',
@@ -17,22 +17,13 @@ angular.module('skinCareStaApp')
 
     $scope.products = [];
 
-    $scope.getProducts = function(){
-        var oReq = new XMLHttpRequest();
-        oReq.onload = reqListener;
-        oReq.open("get", "../data/products.json", true);
-        oReq.send();
-    }
-
-    function reqListener(e) {
-        $scope.products = JSON.parse(this.responseText);
-    }
+    $http.get('data/products.json').then(function(res){
+      $scope.products = res.data;
+    });
 
     $scope.cart = [];
 
     $scope.addToCart = function(index){
         $scope.cart.push(index);
     }
-
-    $scope.getProducts();
   });
