@@ -1,0 +1,14 @@
+[
+    {
+        "name": "Product 1",
+        "description": "Description of Product 1",
+        "price": "1000",
+        "img": "http://miriadna.com/desctopwalls/images/max/Sun-rays-in-forest.jpg"
+    },
+    {
+        "name": "Product 2",
+        "description": "Description of Product 2",
+        "price": "1500",
+        "img": "https://upload.wikimedia.org/wikipedia/commons/f/f6/Epping_Forest_Centenary_Walk_2_-_Sept_2008.jpg"
+    }
+]
