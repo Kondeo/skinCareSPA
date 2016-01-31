@@ -5,13 +5,11 @@
   padding: 0.2em 0;
 }
 
-@import url(https://fonts.googleapis.com/css?family=Lato:600);
-
 body {
   padding: 0;
   background-color: #e5e5e5;
   font-family: 'Lato', sans-serif;
-  font-weight: 600;
+  font-weight: 700;
   color: lightblack;
 }
 
@@ -164,6 +162,9 @@ body {
 
 .navbar-default .navbar-brand {
     color: black;
+    font-family: 'Dynalight', cursive;
+    font-size: 30px;
+    font-weight: 400;
 }
 
 .navRight {
