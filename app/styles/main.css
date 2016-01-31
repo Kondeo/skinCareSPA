@@ -223,3 +223,9 @@ body {
 .cartCount {
     float: right;
 }
+
+.cartIcon {
+    margin-right: 5px;
+    width: 30px;
+    vertical-align: middle;
+}

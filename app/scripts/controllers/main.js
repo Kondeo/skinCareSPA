@@ -8,7 +8,7 @@
  * Controller of the skinCareStaApp
  */
 angular.module('skinCareStaApp')
-  .controller('MainCtrl', function ($scope, $http) {
+  .controller('MainCtrl', function ($scope, $http, CartService) {
     this.awesomeThings = [
       'HTML5 Boilerplate',
       'AngularJS',
@@ -21,9 +21,9 @@ angular.module('skinCareStaApp')
       $scope.products = res.data;
     });
 
-    $scope.cart = [];
+    $scope.cart = CartService.get();
 
     $scope.addToCart = function(index){
-        $scope.cart.push(index);
+        CartService.addItem(index);
     }
   });
