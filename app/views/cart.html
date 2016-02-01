@@ -20,11 +20,12 @@
     <div>Total: ${{total/100}}</div>
     <br />
 
-    <form action="https://www.paypal.com/cgi-bin/webscr" method="post">
+    <form target="paypal" action="https://www.paypal.com/cgi-bin/webscr" method="post">
     <input type="hidden" name="cmd" value="_cart">
     <input type="hidden" name="upload" value="1">
-    <input type="hidden" name="cancel_return" value="http://localhost:9000/#/contact">
-    <input type="hidden" name="business" value="julian@kondeo.com">
+    <input type="hidden" name="return" value="{{completeURL}}">
+    <input type="hidden" name="cancel_return" value="{{cancelURL}}">
+    <input type="hidden" name="business" value="{{CONST.PAYPAL.MERCHANT_EMAIL}}">
     <input type="hidden" name="currency_code" value="USD">
     <repeater ng-repeat="product in myCart">
       <input type="hidden" name="item_name_{{$index + 1}}" value="{{product.item.name}}">

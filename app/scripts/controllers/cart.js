@@ -8,7 +8,7 @@
  * Controller of the skinCareStaApp
  */
 angular.module('skinCareStaApp')
-  .controller('CartCtrl', function ($scope, CartService) {
+  .controller('CartCtrl', function ($scope, $location, $http, CartService) {
     this.awesomeThings = [
       'HTML5 Boilerplate',
       'AngularJS',
@@ -17,6 +17,16 @@ angular.module('skinCareStaApp')
 
     $scope.total = 0;
     $scope.myCart = CartService.getCartDetails();
+    $scope.CONST = {};
+
+    var angularURL = $location.protocol() + location.host + "/#/";
+    var cartParams = "?";
+    var cartIds = CartService.getCart();
+    for(var i=0;i<cartIds.length;i++){
+      cartParams += cartIds[i] + ",";
+    }
+    $scope.completeURL = angularURL + "cart/complete" + cartParams;
+    $scope.cancelURL = angularURL + "cart";
 
     $scope.clearCart = function(){
       CartService.clearCart();
@@ -40,37 +50,7 @@ angular.module('skinCareStaApp')
 
     $scope.calcTotal();
 
-    $scope.checkoutPayPal = function (parms, clearCart) {
-
-      // global data
-      var data = {
-        cmd: "_cart",
-        business: parms.merchantID,
-        upload: "1",
-        rm: "2",
-        charset: "utf-8"
-      };
-
-      // item data
-      for (var i = 0; i < this.items.length; i++) {
-        var item = this.items[i];
-        var ctr = i + 1;
-        data["item_number_" + ctr] = item.sku;
-        data["item_name_" + ctr] = item.name;
-        data["quantity_" + ctr] = item.quantity;
-        data["amount_" + ctr] = item.price.toFixed(2);
-      }
-
-      // build form
-      var form = $('<form></form>');
-      form.attr("action", "https://www.paypal.com/cgi-bin/webscr");
-      form.attr("method", "POST");
-      form.attr("style", "display:none;");
-      this.addFormFields(form, data);
-      this.addFormFields(form, parms.options);
-      $("body").append(form);
-
-      form.submit();
-      form.remove();
-    }
+    $http.get('data/constants.json').then(function(res){
+      $scope.CONST = res.data;
+    });
   });
