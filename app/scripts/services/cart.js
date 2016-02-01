@@ -49,7 +49,8 @@ angular.module('skinCareStaApp').factory("CartService", function($http) {
       localStorage.setItem("cart", JSON.stringify(cart));
   }
   service.clearCart = function(sku){
-      localStorage.removeItem("cart");
+    cart.splice(0,cart.length);
+    localStorage.removeItem("cart");
   }
 
   return service;
