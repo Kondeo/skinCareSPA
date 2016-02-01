@@ -15,13 +15,7 @@ angular.module('skinCareStaApp')
       'Karma'
     ];
 
-    $scope.products = [];
-
-    $http.get('data/products.json').then(function(res){
-      $scope.products = res.data;
-    });
-
-    $scope.cart = CartService.getProducts();
+    $scope.products = CartService.getProducts();
 
     $scope.addToCart = function(index){
         CartService.addItem(index);
