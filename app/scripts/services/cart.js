@@ -30,25 +30,35 @@ angular.module('skinCareStaApp').factory("CartService", function($http) {
       return cartDetails;
   }
 
-  service.getProduct = function(sku){
-      return products[products.indexOf(sku)];
+  service.getProduct = function(index){
+      return products[products.indexOf(index)];
   }
 
-  service.getProducts = function(){
+  service.getProducts = function(indexes){
+    if(indexes){
+      var selectedProducts = [];
+      for(var i=0;i<indexes.length;i++){
+        var product = { "item": products[indexes[i]], "specId": i };
+        selectedProducts.push(product);
+      }
+      return selectedProducts;
+    } else {
       return products;
+    }
   }
 
-  service.addItem = function(sku){
-      cart.push(sku);
+  service.addItem = function(index){
+      cart.push(index);
       localStorage.setItem("cart", JSON.stringify(cart));
   }
 
-  service.removeItem = function(sku){
-      var index = cart.indexOf(sku);
+  service.removeItem = function(index){
+      var index = cart.indexOf(index);
       cart.splice(index, 1);
       localStorage.setItem("cart", JSON.stringify(cart));
   }
-  service.clearCart = function(sku){
+
+  service.clearCart = function(){
     cart.splice(0,cart.length);
     localStorage.removeItem("cart");
   }

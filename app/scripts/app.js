@@ -39,6 +39,11 @@ angular
         controller: 'CartCtrl',
         controllerAs: 'cart'
       })
+      .when('/cart/complete', {
+        templateUrl: 'views/ordercomplete.html',
+        controller: 'OrdercompleteCtrl',
+        controllerAs: 'orderComplete'
+      })
       .otherwise({
         redirectTo: '/'
       });

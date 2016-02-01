@@ -20,7 +20,7 @@ angular.module('skinCareStaApp')
     $scope.CONST = {};
 
     var angularURL = $location.protocol() + "://" + location.host + "/#/";
-    var cartParams = "?";
+    var cartParams = "?v=";
     var cartIds = CartService.getCart();
     for(var i=0;i<cartIds.length;i++){
       cartParams += cartIds[i] + ",";
