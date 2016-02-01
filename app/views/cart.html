@@ -6,7 +6,7 @@
   <br /><br />
 
   <table border="0" style="border-collapse:collapse;border:0px solid #FFCC00;color:#000000;width:100%;" cellpadding="3" cellspacing="3">
-  	<tr ng-repeat="product in myCart">
+  	<tr ng-repeat="product in myCart" ng-init="calcTotal()">
   		<td>{{product.item.name}}</td>
   		<td>${{product.item.price/100}}</td>
   		<td><a href="" ng-click="removeItem(product.cartId)">Remove</a></td>

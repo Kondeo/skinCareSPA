@@ -43,7 +43,7 @@ angular.module('skinCareStaApp')
     $scope.calcTotal = function(){
       var total = 0;
       for(var i=0;i<$scope.myCart.length;i++){
-        total += parseInt($scope.myCart[i].item.price);
+        if(order[i].item) total += parseInt($scope.myCart[i].item.price);
       }
       $scope.total = total;
     }
