@@ -18,8 +18,22 @@
   <br /><br />
   <div style="text-align:right;">
     <div>Total: ${{total/100}}</div>
-    <a href="">Checkout With Paypal</a><br />
-    <a href="">Checkout With Amazon</a>
+    <br />
+
+    <form action="https://www.paypal.com/cgi-bin/webscr" method="post">
+    <input type="hidden" name="cmd" value="_cart">
+    <input type="hidden" name="upload" value="1">
+    <input type="hidden" name="cancel_return" value="http://localhost:9000/#/contact">
+    <input type="hidden" name="business" value="julian@kondeo.com">
+    <input type="hidden" name="currency_code" value="USD">
+    <repeater ng-repeat="product in myCart">
+      <input type="hidden" name="item_name_{{$index + 1}}" value="{{product.item.name}}">
+      <input type="hidden" name="amount_{{$index + 1}}" value="{{product.item.price/100}}">
+      <input type="hidden" name="quantity_{{$index + 1}}" value="1">
+    </repeater>
+    <input type="image" src="https://www.paypal.com/en_US/i/btn/btn_xpressCheckout.gif" name="submit" alt="Make payments with PayPal - it's fast, free and secure!">
+    </form>
+
   </div>
 
 </div>
