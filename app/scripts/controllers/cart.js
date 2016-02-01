@@ -16,17 +16,8 @@ angular.module('skinCareStaApp')
     ];
 
     $scope.total = 0;
-    $scope.myCart = CartService.getCartDetails();
+    $scope.myCart = [];
     $scope.CONST = {};
-
-    var angularURL = $location.protocol() + "://" + location.host + "/#/";
-    var cartParams = "?v=";
-    var cartIds = CartService.getCart();
-    for(var i=0;i<cartIds.length;i++){
-      cartParams += cartIds[i] + ",";
-    }
-    $scope.completeURL = angularURL + "cart/complete" + cartParams;
-    $scope.cancelURL = angularURL + "cart";
 
     $scope.clearCart = function(){
       CartService.clearCart();
@@ -48,9 +39,22 @@ angular.module('skinCareStaApp')
       $scope.total = total;
     }
 
-    $scope.calcTotal();
-
     $http.get('data/constants.json').then(function(res){
       $scope.CONST = res.data;
     });
+
+    $scope.completeLoad = function(){
+      $scope.myCart = CartService.getCartDetails();
+      $scope.calcTotal();
+      var angularURL = $location.protocol() + "://" + location.host + "/#/";
+      var cartParams = "?v=";
+      var cartIds = CartService.getCart();
+      for(var i=0;i<cartIds.length;i++){
+        cartParams += cartIds[i] + ",";
+      }
+      $scope.completeURL = angularURL + "cart/complete" + cartParams;
+      $scope.cancelURL = angularURL + "cart";
+    }
+
+    CartService.getPromise().then($scope.completeLoad);
   });

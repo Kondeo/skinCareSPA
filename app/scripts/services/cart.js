@@ -17,6 +17,10 @@ angular.module('skinCareStaApp').factory("CartService", function($http) {
 
   var service = {};
 
+  service.getPromise = function(){
+    return productLoader;
+  }
+
   service.getCart = function(){
       return cart;
   }
