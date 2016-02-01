@@ -33,4 +33,6 @@ angular.module('skinCareStaApp')
 
     $scope.calcTotal();
 
+    CartService.clearCart();
+
   });
