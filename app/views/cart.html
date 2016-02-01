@@ -1,1 +1,33 @@
-<p>This is the cart view.</p>
+<div ng-if="myCart.length > 0;" class="checkoutCard">
+
+  <div ng-click="clearCart()" style="text-align:right;">Clear Cart</div>
+  <br />
+  <div class="divider"></div>
+  <br /><br />
+
+  <table border="0" style="border-collapse:collapse;border:0px solid #FFCC00;color:#000000;width:100%;" cellpadding="3" cellspacing="3">
+  	<tr ng-repeat="product in myCart">
+  		<td>{{product.item.name}}</td>
+  		<td>${{product.item.price/100}}</td>
+  		<td><a href="" ng-click="removeItem(product.cartId)">Remove</a></td>
+  	</tr>
+  </table>
+
+  <br /><br />
+  <div class="divider"></div>
+  <br /><br />
+  <div style="text-align:right;">
+    <div>Total: ${{total/100}}</div>
+    <a href="">Checkout With Paypal</a><br />
+    <a href="">Checkout With Amazon</a>
+  </div>
+
+</div>
+
+<!-- Cart Empty -->
+
+<div class="center" ng-if="myCart.length == 0;">
+  <br /><br />
+  Your cart is empty. Please go back to the <a href="#/">store</a> to add items.
+
+</div>

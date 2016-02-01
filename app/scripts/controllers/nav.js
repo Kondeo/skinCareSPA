@@ -12,5 +12,5 @@ angular.module('skinCareStaApp')
       $scope.isActive = function(path){
           return path === $location.path();
       }
-      $scope.cart = CartService.get();
+      $scope.cart = CartService.getCart();
 });

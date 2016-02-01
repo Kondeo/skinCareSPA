@@ -21,7 +21,7 @@ angular.module('skinCareStaApp')
       $scope.products = res.data;
     });
 
-    $scope.cart = CartService.get();
+    $scope.cart = CartService.getProducts();
 
     $scope.addToCart = function(index){
         CartService.addItem(index);
