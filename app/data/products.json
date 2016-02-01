@@ -2,6 +2,7 @@
     {
         "name": "Product 1",
         "description": "SanDisk Flash Drive - 32GB",
+        "sku": "SDF",
         "price": "599",
         "image": {
             "background-image": "url('http://ecx.images-amazon.com/images/I/61JZGK6L--L._SL1500_.jpg')",
@@ -12,6 +13,7 @@
     {
         "name": "Product 2",
         "description": "Crucial computer RAM - 8GB kit",
+        "sku": "CCR",
         "price": "2159",
         "image": {
             "background-image": "url('http://ecx.images-amazon.com/images/I/81Lqq3DQPML._SL1500_.jpg')",
@@ -22,6 +24,7 @@
     {
         "name": "Product 3",
         "description": "Backup USB battery pack. Charges iPhone and Android.",
+        "sku": "BUB",
         "price": "2995",
         "image": {
             "background-image": "url('http://ecx.images-amazon.com/images/I/51a7aliO0EL._SL1000_.jpg')",
@@ -32,6 +35,7 @@
     {
         "name": "Product 4",
         "description": "Bluetooth earpiece",
+        "sku": "BEP",
         "price": "1999",
         "image": {
             "background-image": "url('http://ecx.images-amazon.com/images/I/71gH3RhzMfL._SL1500_.jpg')",
@@ -42,6 +46,7 @@
     {
         "name": "Product 5",
         "description": "USB 3.0 hub",
+        "sku": "U3H",
         "price": "1399",
         "image": {
             "background-image": "url('http://ecx.images-amazon.com/images/I/41uOTgf2POL.jpg')",
