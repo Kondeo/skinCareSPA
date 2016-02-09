@@ -86,7 +86,7 @@ body {
     background-position: center center;
     background-repeat: no-repeat;
     border-radius: 2px;
-    box-shadow: 2px 3px 20px grey;
+    box-shadow: 2px 3px 10px lightgrey;
 }
 
 .cardDim {
@@ -222,4 +222,25 @@ body {
 
 .cartCount {
     float: right;
+}
+
+.cartIcon {
+    margin-right: 5px;
+    width: 30px;
+    vertical-align: middle;
+}
+
+.checkoutCard {
+  margin-left: auto;
+  margin-right: auto;
+  padding: 20px;
+  min-width: 400px;
+  width: 70%;
+  background-color: white;
+  box-shadow: 1px 1px 7px lightgrey;
+}
+
+.divider {
+  border-bottom: 1px solid grey;
+  width:100%;
 }

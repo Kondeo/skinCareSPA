@@ -1,0 +1,48 @@
+<div ng-if="myCart.length > 0;" class="checkoutCard">
+
+  <div ng-click="clearCart()" style="text-align:right;">Clear Cart</div>
+  <br />
+  <div class="divider"></div>
+  <br /><br />
+
+  <table border="0" style="border-collapse:collapse;border:0px solid #FFCC00;color:#000000;width:100%;" cellpadding="3" cellspacing="3">
+  	<tr ng-repeat="product in myCart" ng-init="calcTotal()">
+  		<td>{{product.item.name}}</td>
+  		<td>${{product.item.price/100}}</td>
+  		<td><a href="" ng-click="removeItem(product.cartId)">Remove</a></td>
+  	</tr>
+  </table>
+
+  <br /><br />
+  <div class="divider"></div>
+  <br /><br />
+  <div style="text-align:right;">
+    <div>Total: ${{total/100}}</div>
+    <br />
+
+    <form target="paypal" action="https://www.paypal.com/cgi-bin/webscr" method="post">
+    <input type="hidden" name="cmd" value="_cart">
+    <input type="hidden" name="upload" value="1">
+    <input type="hidden" name="return" value="{{completeURL}}">
+    <input type="hidden" name="cancel_return" value="{{cancelURL}}">
+    <input type="hidden" name="business" value="{{CONST.PAYPAL.MERCHANT_EMAIL}}">
+    <input type="hidden" name="currency_code" value="USD">
+    <repeater ng-repeat="product in myCart">
+      <input type="hidden" name="item_name_{{$index + 1}}" value="{{product.item.name}}">
+      <input type="hidden" name="amount_{{$index + 1}}" value="{{product.item.price/100}}">
+      <input type="hidden" name="quantity_{{$index + 1}}" value="1">
+    </repeater>
+    <input type="image" src="https://www.paypal.com/en_US/i/btn/btn_xpressCheckout.gif" name="submit" alt="Make payments with PayPal - it's fast, free and secure!">
+    </form>
+
+  </div>
+
+</div>
+
+<!-- Cart Empty -->
+
+<div class="center" ng-if="myCart.length == 0;">
+  <br /><br />
+  Your cart is empty. Please go back to the <a href="#/">store</a> to add items.
+
+</div>

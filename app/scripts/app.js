@@ -34,6 +34,16 @@ angular
         controller: 'ContactCtrl',
         controllerAs: 'contact'
       })
+      .when('/cart', {
+        templateUrl: 'views/cart.html',
+        controller: 'CartCtrl',
+        controllerAs: 'cart'
+      })
+      .when('/cart/complete', {
+        templateUrl: 'views/ordercomplete.html',
+        controller: 'OrdercompleteCtrl',
+        controllerAs: 'orderComplete'
+      })
       .otherwise({
         redirectTo: '/'
       });
