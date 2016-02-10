@@ -35,6 +35,39 @@
     <input type="image" src="https://www.paypal.com/en_US/i/btn/btn_xpressCheckout.gif" name="submit" alt="Make payments with PayPal - it's fast, free and secure!">
     </form>
 
+    <script src="https://static-na.payments-amazon.com/OffAmazonPayments/us/sandbox/js/Widgets.js"></script>
+
+    <div id="AmazonPayButton"/>
+    <script type="text/javascript">
+       OffAmazonPayments.Button("AmazonPayButton", "A2IFYO67NXY9T6", {
+         type: "hostedPayment",
+
+         hostedParametersProvider: function(done){
+            args = {
+              accessKey: "AKIAINTXEKLDAJYM6JIQ",
+              amount: "27.58",
+              lwaClientId: "amzn1.application-oa2-client.8923917714964c0485fc5a76c39d31f9",
+              returnURL: "http://test.com/",
+              sellerId: "A2IFYO67NXY9T6"
+            }
+            // Call the back end to combine button args with
+            // other seller config param values and sign it.
+            $.getJSON("http://dev.kondeo.com/skincareshop/backend/sign.php",
+               args,
+               function(data) {
+                 args.signature = data.auth;
+                  done (args)
+               })
+            },
+            onError: function(errorCode) {
+              console.log("fuck");
+                console.log(errorCode);
+                console.log(errorCode.getErrorMessage());
+            }
+        });
+    </script>
+
+
   </div>
 
 </div>

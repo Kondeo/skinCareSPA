@@ -54,6 +54,11 @@ angular.module('skinCareStaApp')
       }
       $scope.completeURL = angularURL + "cart/complete" + cartParams;
       $scope.cancelURL = angularURL + "cart";
+
+      $scope.completeURL = "test";
+      $http.get('http://dev.kondeo.com/skincareshop/backend/sign.php?productIds=' + cartIds).then(function(res){
+        $scope.signature = res.data;
+      });
     }
 
     CartService.getPromise().then($scope.completeLoad);
