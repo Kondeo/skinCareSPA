@@ -8,7 +8,7 @@
   <table border="0" style="border-collapse:collapse;border:0px solid #FFCC00;color:#000000;width:100%;" cellpadding="3" cellspacing="3">
   	<tr ng-repeat="product in orderItems" ng-if="product.item">
   		<td>{{product.item.name}}</td>
-  		<td>${{product.item.price/100}}</td>
+  		<td>${{(product.item.price/100).toFixed(2)}}</td>
   	</tr>
   </table>
 
@@ -16,7 +16,7 @@
   <div class="divider"></div>
   <br /><br />
   <div style="text-align:right;">
-    <div>Total: ${{total/100}}</div>
+    <div>Total: ${{(total/100).toFixed(2)}}</div>
     <br />
 
   </div>

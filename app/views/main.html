@@ -16,7 +16,7 @@
         <div class="cardDim"></div>
         <div class="cardOverlay">
             {{product.description}}
-            <a href="" ng-click="$parent.addToCart($index)" class="btn addCart" >${{product.price/100}} - Add to Cart</a>
+            <a href="" ng-click="$parent.addToCart($index)" class="btn addCart" >${{(product.price/100).toFixed(2)}} - Add to Cart</a>
         </div>
 
     </div>
