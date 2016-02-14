@@ -1,9 +1,9 @@
 [
     {
-        "name": "Product 1",
-        "description": "SanDisk Flash Drive - 32GB",
-        "sku": "SDF",
-        "price": "599",
+        "name": "La Roche Posay Anthelios SX Daily Moisturizer",
+        "description": "La Roche Posay Anthelios SX Daily Moisturizer",
+        "sku": "LRM",
+        "price": "2990",
         "image": {
             "background-image": "url('http://ecx.images-amazon.com/images/I/61JZGK6L--L._SL1500_.jpg')",
             "size": "contain",
@@ -11,10 +11,10 @@
         }
     },
     {
-        "name": "Product 2",
-        "description": "Crucial computer RAM - 8GB kit",
-        "sku": "CCR",
-        "price": "2159",
+        "name": "La Roche Posay Anthelios 60 Cooling Water Sunscreen",
+        "description": "La Roche Posay Anthelios 60 Cooling Water Sunscreen",
+        "sku": "LR60S",
+        "price": "2990",
         "image": {
             "background-image": "url('http://ecx.images-amazon.com/images/I/81Lqq3DQPML._SL1500_.jpg')",
             "size": "contain",
@@ -22,10 +22,10 @@
         }
     },
     {
-        "name": "Product 3",
-        "description": "Backup USB battery pack. Charges iPhone and Android.",
-        "sku": "BUB",
-        "price": "2995",
+        "name": "La Roche Posay Anthelios 30 Cooling Water Sunscreen",
+        "description": "La Roche Posay Anthelios 30 Cooling Water Sunscreen",
+        "sku": "LR30S",
+        "price": "2990",
         "image": {
             "background-image": "url('http://ecx.images-amazon.com/images/I/51a7aliO0EL._SL1000_.jpg')",
             "size": "contain",
@@ -33,10 +33,10 @@
         }
     },
     {
-        "name": "Product 4",
-        "description": "Bluetooth earpiece",
-        "sku": "BEP",
-        "price": "1999",
+        "name": "La Roche Posay Anthelios AOX",
+        "description": "La Roche Posay Anthelios AOX",
+        "sku": "LRAOX",
+        "price": "3500",
         "image": {
             "background-image": "url('http://ecx.images-amazon.com/images/I/71gH3RhzMfL._SL1500_.jpg')",
             "size": "contain",
@@ -44,10 +44,87 @@
         }
     },
     {
-        "name": "Product 5",
-        "description": "USB 3.0 hub",
-        "sku": "U3H",
-        "price": "1399",
+        "name": "La Roche Posay Redermic C Normal",
+        "description": "La Roche Posay Redermic C Normal",
+        "sku": "LRRCN",
+        "price": "3500",
+        "image": {
+            "background-image": "url('http://ecx.images-amazon.com/images/I/41uOTgf2POL.jpg')",
+            "size": "contain",
+            "position": "center center"
+        }
+    },
+    {
+        "name": "La Roche Posay Redermic C Dry",
+        "description": "La Roche Posay Redermic C Dry",
+        "sku": "LRRCD",
+        "price": "3500",
+        "image": {
+            "background-image": "url('http://ecx.images-amazon.com/images/I/41uOTgf2POL.jpg')",
+            "size": "contain",
+            "position": "center center"
+        }
+    },
+    {
+        "name": "La Roche Posay Redermic R Intensive",
+        "description": "La Roche Posay Redermic R Intensive",
+        "sku": "LRRRI",
+        "price": "3500",
+        "image": {
+            "background-image": "url('http://ecx.images-amazon.com/images/I/41uOTgf2POL.jpg')",
+            "size": "contain",
+            "position": "center center"
+        }
+    },
+    {
+        "name": "La Roche Posay Redermic C UV",
+        "description": "La Roche Posay Redermic C UV",
+        "sku": "LRRCU",
+        "price": "3500",
+        "image": {
+            "background-image": "url('http://ecx.images-amazon.com/images/I/41uOTgf2POL.jpg')",
+            "size": "contain",
+            "position": "center center"
+        }
+    },
+    {
+        "name": "La Roche Posay Effaclar Purifying Foaming Gel",
+        "description": "La Roche Posay Effaclar Purifying Foaming Gel",
+        "sku": "LRPFG",
+        "price": "1400",
+        "image": {
+            "background-image": "url('http://ecx.images-amazon.com/images/I/41uOTgf2POL.jpg')",
+            "size": "contain",
+            "position": "center center"
+        }
+    },
+    {
+        "name": "La Roche Posay Rosaliac Skin Perfecting Anti-Redness Moisturizer",
+        "description": "La Roche Posay Rosaliac Skin Perfecting Anti-Redness Moisturizer",
+        "sku": "LRSPM",
+        "price": "2800",
+        "image": {
+            "background-image": "url('http://ecx.images-amazon.com/images/I/41uOTgf2POL.jpg')",
+            "size": "contain",
+            "position": "center center"
+        }
+    },
+    {
+        "name": "La Roche Posay Mela D Pigment Control Serum",
+        "description": "La Roche Posay Mela D Pigment Control Serum",
+        "sku": "LRPCS",
+        "price": "3200",
+        "image": {
+            "background-image": "url('http://ecx.images-amazon.com/images/I/41uOTgf2POL.jpg')",
+            "size": "contain",
+            "position": "center center"
+        }
+    },
+    {
+        "name": "La Roche Posay Hydraphase Intense Legere",
+        "description": "La Roche Posay Hydraphase Intense Legere",
+        "sku": "LRHIL",
+        "price": "2800",
         "image": {
             "background-image": "url('http://ecx.images-amazon.com/images/I/41uOTgf2POL.jpg')",
             "size": "contain",
