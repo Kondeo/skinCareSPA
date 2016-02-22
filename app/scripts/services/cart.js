@@ -1,5 +1,8 @@
-angular.module('skinCareStaApp').factory("CartService", function($http) {
+angular.module('skinCareStaApp')
+.factory("CartService", function($http, ngToast) {
   var cart;
+
+   //ngToast.create('a toast message...');
 
   var products = [];
 
