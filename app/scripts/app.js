@@ -48,4 +48,15 @@ angular
       .otherwise({
         redirectTo: '/'
       });
+  })
+
+//Also doing some configurations for our taosts
+.config(['ngToastProvider', function(ngToast) {
+
+  //Also configure our toasts here
+  ngToast.configure({
+      horizontalPosition: 'left',
+      additionalClasses: 'toasty'
   });
+
+}]);
