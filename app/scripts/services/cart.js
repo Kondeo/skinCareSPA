@@ -1,5 +1,5 @@
 angular.module('skinCareStaApp')
-.factory("CartService", function($http, ngToast) {
+.factory("CartService", function($http, toasty) {
   var cart;
 
   var products = [];
@@ -57,10 +57,8 @@ angular.module('skinCareStaApp')
       localStorage.setItem("cart", JSON.stringify(cart));
 
       //Toast the addition
-      ngToast.create({
-          timeout: 2500,
-          content: 'Added ' + products[index].name + ' to your cart!',
-      });
+      if(products[index]) toasty.show('Added ' + products[index].name + ' to your cart!');
+      else toasty.show('Added the item to your cart!');
   }
 
   service.removeItem = function(index){
@@ -69,10 +67,8 @@ angular.module('skinCareStaApp')
       localStorage.setItem("cart", JSON.stringify(cart));
 
       //Toast the removal
-      ngToast.create({
-          timeout: 2500,
-          content: 'Removed ' + products[index].name + ' to your cart!',
-      });
+      if(products[index]) toasty.show('Removed ' + products[index].name + ' to your cart!');
+      else toasty.show('Removed the item from your cart!');
   }
 
   service.clearCart = function(){
