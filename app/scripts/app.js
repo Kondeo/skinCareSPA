@@ -56,7 +56,8 @@ angular
   //Also configure our toasts here
   ngToast.configure({
       horizontalPosition: 'left',
-      additionalClasses: 'toasty'
+      additionalClasses: 'toastAnimate',
+      maxNumber: 3
   });
 
 }]);

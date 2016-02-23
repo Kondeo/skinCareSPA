@@ -58,7 +58,7 @@ angular.module('skinCareStaApp')
 
       //Toast the addition
       ngToast.create({
-          timeout: 2000,
+          timeout: 2500,
           content: 'Added ' + products[index].name + ' to your cart!',
       });
   }
@@ -70,7 +70,7 @@ angular.module('skinCareStaApp')
 
       //Toast the removal
       ngToast.create({
-          timeout: 2000,
+          timeout: 2500,
           content: 'Removed ' + products[index].name + ' to your cart!',
       });
   }
