@@ -1,4 +1,5 @@
-angular.module('skinCareStaApp').factory("CartService", function($http) {
+angular.module('skinCareStaApp')
+.factory("CartService", function($http, toasty) {
   var cart;
 
   var products = [];
@@ -54,12 +55,20 @@ angular.module('skinCareStaApp').factory("CartService", function($http) {
   service.addItem = function(index){
       cart.push(index);
       localStorage.setItem("cart", JSON.stringify(cart));
+
+      //Toast the addition
+      if(products[index]) toasty.show('Added ' + products[index].name + ' to your cart!');
+      else toasty.show('Added the item to your cart!');
   }
 
   service.removeItem = function(index){
       var index = cart.indexOf(index);
       cart.splice(index, 1);
       localStorage.setItem("cart", JSON.stringify(cart));
+
+      //Toast the removal
+      if(products[index]) toasty.show('Removed ' + products[index].name + ' to your cart!');
+      else toasty.show('Removed the item from your cart!');
   }
 
   service.clearCart = function(){
