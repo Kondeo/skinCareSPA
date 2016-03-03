@@ -265,6 +265,26 @@ body {
 
 
 /* Ng toast animations from animate.css */
+@-webkit-keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+}
+
 @keyframes fadeInUp {
   from {
     opacity: 0;
@@ -314,6 +334,21 @@ body {
 /******************
     Aaron's Additional Styles
 ******************/
+
+.fadeIn {
+    -webkit-animation-duration: .5s;
+    animation-duration: .5s;
+    -webkit-animation-fill-mode: both;
+    animation-fill-mode: both;
+
+  -webkit-animation-name: fadeIn;
+  animation-name: fadeIn;
+}
+
+a:hover {
+    -webkit-transition: color 0.5s;
+    transition: color 0.5s;
+}
 
 .toastAnimate {
 
