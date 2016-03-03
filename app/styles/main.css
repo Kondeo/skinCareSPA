@@ -1,13 +1,14 @@
 .browsehappy {
   margin: 0.2em 0;
   background: #ccc;
-  color: #000;
+  color: #090909;
   padding: 0.2em 0;
 }
 
 body {
   padding: 0;
   background-color: #e5e5e5;
+  color: #090909;
   font-family: 'Lato', sans-serif;
   font-weight: 700;
   color: lightblack;
@@ -167,14 +168,26 @@ body {
     color: #d2d2d2 !important;
 }
 
+.navbar-brand:focus{
+    color: #d2d2d2 !important;
+}
+
 .navRight {
     float: right;
+}
+
+.navItem:focus {
+    color: #d2d2d2 !important;
 }
 
 .navbar-default .navbar-nav > .active > a {
     background-color: inherit;
     border-bottom: 2px solid #bbddff;
     color: #f2f2f2;
+}
+
+.navbar-default > a:focus {
+    color: #d2d2d2 !important;
 }
 
 .navbar-default .navbar-nav > .active:hover {
@@ -311,8 +324,12 @@ body {
 
   -webkit-animation-name: fadeInUp;
   animation-name: fadeInUp;
+}
 
-
+.alert-success {
+    border-color: #ffffff !important;
+    background-color: #ffffff !important;
+    color: #090909 !important;
 }
 
 .toastAnimate.ng-leave {
