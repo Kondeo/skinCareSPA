@@ -1,24 +1,27 @@
-<div class="center">
-    <ul class="homeList">
-        <li>Free Shipping</li>
-        <li>Same Day Shipping</li>
-        <li>Always Free Samples</li>
-    </ul>
-</div>
-<br />
-<div class="center hint">
-    Hover over a card to see details
-</div>
-<br />
-<div id="mainbox">
 
-    <div class="card" ng-repeat="product in products" ng-style="product.image">
-        <div class="cardDim"></div>
-        <div class="cardOverlay">
-            {{product.description}}
-            <a href="" ng-click="$parent.addToCart($index)" class="btn addCart" >${{(product.price/100).toFixed(2)}} - Add to Cart</a>
+<div class = "fadeIn">
+    <div class="center">
+        <ul class="homeList">
+            <li>Free Shipping</li>
+            <li>Same Day Shipping</li>
+            <li>Always Free Samples</li>
+        </ul>
+    </div>
+    <br />
+    <div class="center hint">
+        Hover over a card to see details
+    </div>
+    <br />
+    <div id="mainbox">
+
+        <div class="card" ng-repeat="product in products" ng-style="product.image">
+            <div class="cardDim"></div>
+            <div class="cardOverlay">
+                {{product.description}}
+                <a href="" ng-click="$parent.addToCart($index)" class="btn addCart" >${{(product.price/100).toFixed(2)}} - Add to Cart</a>
+            </div>
+
         </div>
 
     </div>
-
 </div>
