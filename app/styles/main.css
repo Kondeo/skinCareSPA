@@ -73,8 +73,8 @@ body {
 
 .card{
     position: relative;
-    width: 250px;
-    height: 200px;
+    width: 400px;
+    height: 350px;
     margin: 10px;
     /*Must be pure white for images */
     background-color: #ffffff;
